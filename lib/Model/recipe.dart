@@ -1,25 +1,141 @@
+import 'ingredient.dart';
+
 class Recipe {
-  String imgLabel; // Label for the image
-  String imageUrl; // URL of the image
-  // Constructor
-  Recipe(this.imageUrl, this.imgLabel);
+  final String imageUrl;
+  final String imgLabel;
+  final String description;
+  final List<Ingredient> ingredients;
+  double price;
+
+  Recipe(
+    this.imageUrl,
+    this.imgLabel,
+    this.description,
+    this.ingredients,
+    this.price,
+  );
+
   static List<Recipe> samples = [
     Recipe(
-      'assets/images/chelsea.png','Chelsea Football club)',
+      'assets/images/chelsea1.png',
+      'Chelsea Football Club',
+      'Chelsea Football Club is a professional football club based in London, founded in 1905. The club is known for its strong performances in English and European competitions and plays its home matches at Stamford Bridge.',
+      [
+        Ingredient(name: 'Logo', quantity: 100, unit: '%'),
+      ],3000,
     ),
-    Recipe('assets/images/caicedo.webp', 'Moises caicedo'),
-    Recipe('assets/images/palmer.png', 'Cole Palmer'),
-    Recipe('assets/images/enzo.png', 'Enzo fernández'),
-    Recipe('assets/images/garnacho.png', 'Alejandro Garnacho'),
-    Recipe('assets/images/estevao.png', 'Estevao Willian'),
-    Recipe('assets/images/neto1.png', 'Pedro Neto'),
-    Recipe('assets/images/delap.png', 'Liam Delap'),
-    Recipe('assets/images/cucurella.png', 'Marc Cucurella'),
-    Recipe('assets/images/james.png', 'Reece James'),
-    Recipe('assets/images/joao.png', 'Joao Pedro'),
-    Recipe('assets/images/gusto.png', 'Malo Gusto'),
-    Recipe('assets/images/chalobah.png', 'Trevoh Chalobah'),
-    Recipe('assets/images/levi.png', 'Levi Colwill'),
-    Recipe('assets/images/robert.png', 'Robert Sanchez'),
+    Recipe(
+      'assets/images/caicedo1.png',
+      'Moises Caicedo',
+      'Midfielder',
+      [
+        Ingredient(name: 'Player Grade', quantity: 100, unit: '%'),
+      ],3000,
+    ),
+    Recipe(
+      'assets/images/chalobah1.png',
+      'Trevoh Chalobah',
+      'Centre-Back',
+      [
+        Ingredient(name: 'Player Grade', quantity: 100, unit: '%'),
+      ],3000,
+    ),
+    Recipe(
+      'assets/images/cucurella1.png',
+      'Marc Cucurella',
+      'Defender/Wing--back',
+      [
+        Ingredient(name: 'Player Grade', quantity: 100, unit: '%'),
+      ],3000,
+    ),
+    Recipe(
+      'assets/images/delap1.png',
+      'Liam Delap',
+      'Striker',
+      [
+        Ingredient(name: 'Player Grade', quantity: 100, unit: '%'),
+      ],3000,
+    ),
+
+    Recipe(
+      'assets/images/enzo1.png',
+      'Enzo Fernandez',
+      'Midfielder',
+      [
+        Ingredient(name: 'Player Grade', quantity: 100, unit: '%'),
+      ],3000,
+    ),
+    Recipe(
+      'assets/images/estevao1.png',
+      'Estevao Willian',
+      'Forward',
+      [
+        Ingredient(name: 'Player Grade', quantity: 100, unit: '%'),
+      ],3000,
+    ),
+    Recipe(
+      'assets/images/garnacho1.png',
+      'Alexander Garnacho',
+      'Winger',
+      [
+        Ingredient(name: 'Player Grade', quantity: 100, unit: '%'),
+      ],3000,
+    ),
+    Recipe(
+      'assets/images/gusto1.png',
+      'Malo Gusto',
+      'Right-Back',
+      [
+        Ingredient(name: 'Player Grade', quantity: 100, unit: '%'),
+      ],3000,
+    ),
+    Recipe(
+      'assets/images/james1.png',
+      'Reece James',
+      'Defender/Wing-back/Midfielder',
+      [
+        Ingredient(name: 'Player Grade', quantity: 100, unit: '%'),
+      ],3000,
+    ),
+    Recipe(
+      'assets/images/joao1.png',
+      'Joao Pedro',
+      'Forward',
+      [
+        Ingredient(name: 'Player Grade', quantity: 100, unit: '%'),
+      ],3000,
+    ),
+    Recipe(
+      'assets/images/levi1.png',
+      'Levi Colwill',
+      'Centre-Back',
+      [
+        Ingredient(name: 'Player Grade', quantity: 100, unit: 'layer'),
+      ],3000,
+    ),
+    Recipe(
+      'assets/images/neto.png',
+      'Pedro Neto',
+      'Winger',
+      [
+        Ingredient(name: 'Player Grade', quantity: 100, unit: '%'),
+      ],3000,
+    ),
+    Recipe(
+      'assets/images/palmer1.png',
+      'Cole Palmer',
+      'Attacking Midfielder/Winger',
+      [
+        Ingredient(name: 'Player Grade', quantity: 100, unit: '%'),
+      ],3000,
+    ),
+    Recipe(
+      'assets/images/robert2.png',
+      'Robert Sanchez',
+      'Goalkeeper',
+      [
+        Ingredient(name: 'Player Grade', quantity: 100, unit: '%'),
+      ],3000,
+    ),
   ];
 }

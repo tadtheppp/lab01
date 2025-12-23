@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:lab01/model/recipe.dart';
+import 'package:lab01/detail.dart';
 
 void main() {
   runApp(const RecipesMyApp());
@@ -19,7 +20,7 @@ class RecipesMyApp extends StatelessWidget {
           backgroundColor: Colors.white,
         ),
       ),
-      home: const MyHomePage(title: 'Chelsea Football club'),
+      home: const MyHomePage(title: 'Chelsea Football Club Store'),
     );
   }
 }
@@ -51,7 +52,20 @@ class _MyHomePageState extends State<MyHomePage> {
         child: Container(
           child: ListView.builder(
             itemBuilder: (BuildContext context, int index) {
-              return buildRecipeCard(Recipe.samples[index]);
+              return GestureDetector(
+                onTap: () {
+                  print('You tapped on ${Recipe.samples[index].imgLabel}');
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) {
+                        return Detail (samples: Recipe.samples[index]);
+                      },
+                    ),
+                  );
+                },
+                child: buildRecipeCard(Recipe.samples[index]),
+              );
             },
             itemCount: Recipe.samples.length,
           ),
