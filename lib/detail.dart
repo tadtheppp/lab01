@@ -19,7 +19,7 @@ class _DetailState extends State<Detail> {
 
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Food Detail'),
+        title: const Text('Chelsea Football Club Store'),
         centerTitle: true,
       ),
       body: SingleChildScrollView(
@@ -32,7 +32,7 @@ class _DetailState extends State<Detail> {
               fit: BoxFit.cover,
             ),
 
-            const SizedBox(height: 20),
+            const SizedBox(height: 16),
 
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 16),
